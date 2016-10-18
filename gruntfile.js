@@ -1,4 +1,4 @@
-﻿/// <vs BeforeBuild='uglify:bundle' />
+/// <vs BeforeBuild='uglify:bundle' />
 module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -22,6 +22,7 @@ module.exports = function (grunt) {
                         'assets/css/animate.css',
                         'lib/modules/loading-bar/loading-bar.css',
                         'lib/modules/angularjs-toaster/toaster.css',
+						'assets/css/style.css'
                     ]
                 }
             }
