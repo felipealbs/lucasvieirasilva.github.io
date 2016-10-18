@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app" ng-controller="siteController">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lucas Vieira - Desenvolvedor</title>
+
+    <meta name="description" content="Lucas Vieira Desenvolvedor .Net">
+    <meta name="author" content="Lucas Vieira">
+
+    <link rel="author" href="https://plus.google.com/u/0/110369958193213131253/posts" />
+    <link rel="publisher" href="”https://plus.google.com/u/0/110369958193213131253/“" />
+
+    <meta itemprop="name" content="Lucas Vieira || Desenvolvedor">
+    <meta itemprop="description" content="Lucas Vieira Desenvolvedor">
+
+    <link href="bundles/styles.css" rel="stylesheet" />
+    <link href="assets/css/style.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="wrapper">
+        <!-- Preloader -->
+
+        <div id="preloader">
+            <div id="status">
+                <div class="status-mes"><h4>Lucas Vieira</h4></div>
+            </div>
+        </div>
+
+        <!-- Navigation start -->
+
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Lucas Vieira</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#intro">{{ 'label_home' | translate }}</a></li>
+                        <li><a href="#profile">{{ 'label_profile' | translate }}</a></li>
+                        <li><a href="#services">{{ 'label_service' | translate }}</a></li>
+                        <li><a href="#resume">{{ 'label_resume' | translate }}</a></li>
+                        <li><a href="#contact">{{ 'label_contact' | translate }}</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Navigation end -->
+        <!-- Intro section start -->
+
+        <section id="intro" class="section">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12">
+
+                        <div class="hello wow bounceInDown">
+                            <h1>{{ 'label_welcome' | translate }}</h1>
+                            <h3><span class="rotate"> {{ 'label_developer' | translate }} ! {{ 'label_web_developer' | translate }} ! {{ 'label_windows_developer' | translate }}</span></h3>
+                        </div>
+
+                        <a href="#profile">
+                            <div class="mouse-icon">
+                                <div class="wheel"></div>
+                            </div>
+                        </a>
+
+                    </div>
+
+                </div><!-- .row -->
+
+            </div><!-- .container -->
+
+        </section>
+
+        <!-- Intro section end -->
+        <!-- Profile contact callout section -->
+
+        <section id="profile-contact">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-4 wow bounceInLeft">
+                        <div class="profile-item">
+                            <i class="fa fa-envelope-o"></i>
+                            <h5><a href="#">lucas.vieira94@outlook.com</a></h5>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 wow bounceInUp">
+                        <div class="profile-item">
+                            <i class="fa fa-phone"></i>
+                            <h5>+55 (11) 97158-3214</h5>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 wow bounceInRight">
+                        <div class="profile-item">
+                            <i class="fa fa-map-marker"></i>
+                            <h5>Diadema - São Paulo</h5>
+                        </div>
+                    </div>
+
+                </div><!-- .row -->
+
+            </div><!-- .container -->
+
+        </section>
+
+        <!-- Profile contact callout section -->
+        <!-- Profile section start -->
+
+        <section id="profile" class="section">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 headline wow bounceInDown">
+                        <h2>Lucas Vieira</h2>
+                        <p>{{ 'label_developer' | translate }}. {{ 'label_web_developer' | translate }}. {{ 'label_windows_developer' | translate }}</p>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 hidden-xs wow bounceInLeft">
+                        <img class="avatar" src="assets/images/photo.jpg" alt="">
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 wow bounceInUp">
+
+                        <div class="profile-widget">
+                            <h3>{{ 'label_skill' | translate }}</h3>
+
+                            <div ng-repeat="item in skills">
+                                <h5>{{ item.name }}</h5>
+                                <div class="skill-bar">
+                                    <div ng-class="{ 'skill-rate-on': item.level >= 1, 'skill-rate-off': item.level < 1 }"></div>
+                                    <div ng-class="{ 'skill-rate-on': item.level >= 2, 'skill-rate-off': item.level < 2 }"></div>
+                                    <div ng-class="{ 'skill-rate-on': item.level >= 3, 'skill-rate-off': item.level < 3 }"></div>
+                                    <div ng-class="{ 'skill-rate-on': item.level >= 4, 'skill-rate-off': item.level < 4 }"></div>
+                                    <div ng-class="{ 'skill-rate-on': item.level >= 5, 'skill-rate-off': item.level < 5 }"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile-widget">
+                            <h3>{{ 'label_social_profiles' | translate }}</h3>
+                            <ul class="widget-social">
+                                <li><a href="https://www.facebook.com/lucas.vieira.3572" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
+                                <li><a href="https://www.linkedin.com/pub/lucas-vieira-da-silva/80/615/2a" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="https://plus.google.com/u/0/110369958193213131253/posts" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+
+                    </div><!-- .col-md-3 -->
+
+                    <div class="col-md-6 col-sm-12 wow bounceInRight">
+                        <h3>{{ 'label_professional_profile' | translate }}</h3>
+                        <p ng-bind-html="textProfessionalProfile">
+                        </p>
+                    </div>
+
+                </div><!-- .row -->
+
+            </div><!-- .container -->
+
+        </section>
+
+        <!-- Profile section end -->
+        <!-- Services section start -->
+
+        <section id="services" class="section">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 headline wow bounceInDown">
+                        <h2>{{ 'label_what_i_can_do' | translate }}</h2>
+                        <p>{{ 'label_my_services' | translate }}</p>
+                    </div>
+
+                    <div class="col-md-12">
+
+                        <div class="row">
+
+                            <div class="col-sm-4 wow bounceInLeft">
+                                <div class="service">
+                                    <div class="icon">
+                                        <i class="fa fa-globe"></i>
+                                    </div>
+                                    <h4>{{ 'label_aspnet_solutions' | translate }}</h4>
+                                    <div class="text">
+                                        <p>{{ 'text_aspnet_solutions' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 wow bounceInUp">
+                                <div class="service">
+                                    <div class="icon">
+                                        <i class="fa fa-code"></i>
+                                    </div>
+                                    <h4>{{ 'label_webapi' | translate }}</h4>
+                                    <div class="text">
+                                        <p>{{ 'text_webapi' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 wow bounceInRight">
+                                <div class="service">
+                                    <div class="icon">
+                                        <i class="fa fa-windows"></i>
+                                    </div>
+                                    <h4>{{ 'label_windows_application' | translate }}</h4>
+                                    <div class="text">
+                                        <p>{{ 'text_windows_application' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- .row -->
+
+                        <div class="row">
+
+                            <div class="col-sm-4 wow bounceInUp" data-wow-delay=".2s">
+                                <div class="service">
+                                    <div class="icon">
+                                        <i class="fa fa-database"></i>
+                                    </div>
+                                    <h4>{{ 'label_database' | translate }}</h4>
+                                    <div class="text">
+                                        <p>{{ 'text_database' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4 wow bounceInUp" data-wow-delay=".4s">
+                                <div class="service">
+                                    <div class="icon">
+                                        <i class="fa fa-google"></i>
+                                    </div>
+                                    <h4>{{ 'label_angularJs' | translate }}</h4>
+                                    <div class="text">
+                                        <p>{{ 'text_angularJs' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- .row -->
+
+                    </div><!-- .col-md-12 -->
+
+                </div><!-- .row -->
+
+            </div><!-- .container -->
+
+        </section>
+
+        <!-- Services section end -->
+        <!-- Resume section start -->
+
+        <section id="resume" class="section">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 headline wow bounceInDown">
+                        <h2>{{ 'label_resume' | translate }}</h2>
+                        <p>{{ 'label_resume_subtitle' | translate }}</p>
+                    </div>
+
+                </div><!-- .row -->
+
+                <div class="row resume-items">
+
+                    <div class="col-md-3 wow bounceInLeft">
+                        <h3>{{ 'label_education' | translate }}</h3>
+                    </div>
+
+                    <div class="col-md-6 col-sm-8 resume-item wow bounceInUp">
+                        <h4>{{ 'name_analysis_and_systems_development' | translate }}</h4>
+                        <p>{{ 'descriptin_analysis_and_systems_development' | translate }}</p>
+                        <hr class="hidden-xs">
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
+                        <h4><i class="fa fa-suitcase"></i>{{ 'place_analysis_and_systems_development' | translate }}</h4>
+                        <i class="fa fa-calendar"></i> 2012 - 2014
+                        <hr class="visible-xs">
+                    </div>
+
+                </div><!-- .row -->
+
+                <div class="row resume-items">
+                    <div class="col-md-3 wow bounceInLeft">
+                        <h3>{{ 'certification_label' | translate }}</h3>
+                    </div>
+
+                    <div class="col-md-6 col-sm-8 resume-item wow bounceInUp">
+                        <h4>{{ 'certification_csharp_programming' | translate }}</h4>
+                        <hr class="hidden-xs">
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
+                        <h4><i class="fa fa-suitcase"></i>{{ 'certification_csharp_organ_issuer' | translate }}</h4>
+                        <i class="fa fa-calendar"></i> 2015/09 - 2017/09
+                        <hr class="visible-xs">
+                    </div>
+                </div>
+
+                <div class="row resume-items">
+
+                    <div class="col-md-3 wow bounceInLeft">
+                        <h3>{{ 'label_experience' | translate }}</h3>
+                    </div>
+
+                    <div class="col-md-6 col-sm-8 resume-item wow bounceInUp">
+                        <h4>{{ 'name_experience_programmer_analyst_full' | translate }}</h4>
+                        <p>{{ 'description_experience_programmer_analyst_full' | translate }}</p>
+                        <hr class="hidden-xs">
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
+                        <h4><i class="fa fa-suitcase"></i>{{ 'place_experience_trainne' | translate }}</h4>
+                        <i class="fa fa-calendar"></i> 2015/03 - {{ 'currently' | translate }}
+                        <hr class="visible-xs">
+                    </div>
+
+                    <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp">
+                        <h4>{{ 'name_experience_programmer_analyst_jr' | translate }}</h4>
+                        <p>{{ 'description_experience_programmer_analyst_jr' | translate }}</p>
+                        <hr class="hidden-xs">
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
+                        <h4><i class="fa fa-suitcase"></i>{{ 'place_experience_trainne' | translate }}</h4>
+                        <i class="fa fa-calendar"></i> 2014/07 - 2015/02
+                        <hr class="visible-xs">
+                    </div>
+
+                    <div class="col-md-6 col-md-offset-3 col-sm-8 resume-item wow bounceInUp">
+                        <h4>{{ 'name_experience_trainee' | translate }}</h4>
+                        <p>{{ 'description_experience_trainne' | translate }}</p>
+                        <hr class="hidden-xs">
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 resume-place wow bounceInRight">
+                        <h4><i class="fa fa-suitcase"></i>{{ 'place_experience_trainne' | translate }}</h4>
+                        <i class="fa fa-calendar"></i> 2013/11 - 2014/06
+                        <hr class="visible-xs">
+                    </div>
+
+                </div><!-- .row -->
+            </div><!-- .container -->
+
+        </section>
+
+        <!-- Resume section end -->
+        <!-- Contact section start -->
+
+        <section id="contact" class="section">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 headline wow bounceInLeft">
+                        <h2>{{ 'label_contact_us' | translate }}</h2>
+                        <p>{{ 'label_contact_subtitle' | translate }}</p>
+                    </div>
+
+                    <div class="col-md-6 wow bounceInUp">
+
+                        <ul class="icon-list">
+                            <li><i class="fa fa-fw fa-map-marker"></i>Diadema, São Paulo - Brasil</li>
+                            <li><i class="fa fa-fw fa-phone"></i>+55 (11) 97158-3214</li>
+                            <li><i class="fa fa-fw fa-envelope-o"></i><a href="mailto:lucas.vieira94@outlook.com">lucas.vieira94@outlook.com</a></li>
+                        </ul>
+
+                    </div>
+
+                </div><!-- .row -->
+
+            </div><!-- .container -->
+
+        </section>
+
+        <!-- Contact section end -->
+        <!-- Footer start -->
+
+        <footer id="footer">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <p class="copy">
+                            © {{ currentdate | date: 'yyyy' }} Lucas Vieira, {{ 'all_rights_reserved' | translate }}.
+                        </p>
+                    </div>
+
+                </div><!-- .row -->
+
+            </div><!-- .container -->
+
+        </footer>
+
+        <!-- Footer end -->
+        <toaster-container toaster-options="{'position-class': 'toast-bottom-right', 'close-button':true}"></toaster-container>
+    </div><!-- .wrapper -->
+
+    <script src="bundles/core.js"></script>
+</body>
+</html>
